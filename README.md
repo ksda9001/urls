@@ -1,6 +1,6 @@
 ## 介绍
 
-一个使用 Cloudflare Pages 创建的 URL 缩短器
+一个采用fluent design2风格的，使用 Cloudflare Pages 创建的 URL 缩短器
 
 *Demo* : [https://shortlinks.dpdns.org/](https://shortlinks.dpdns.org/)
 
