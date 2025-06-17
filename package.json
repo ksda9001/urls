@@ -14,16 +14,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/x-dr/short.git"
+    "url": "git+https://github.com/ksda9001/urls.git"
   },
   "keywords": [
     "short",
     "url"
   ],
-  "author": "x-dr",
+  "author": "Cicero",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/x-dr/short/issues"
+    "url": "https://github.com/ksda9001/urls/issues"
   },
-  "homepage": "https://github.com/x-dr/short#readme"
+  "homepage": "https://github.com/ksda9001/urls#readme"
 }
