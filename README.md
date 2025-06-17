@@ -65,7 +65,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"url":"https://shortlinks.
 ```json
 {
   "slug": "<slug>",
-  "link": "http://d.131213.xyz/<slug>"
+  "link": "https://shortlinks.dpdns.org/<slug>"
 }
 ```
 
