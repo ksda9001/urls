@@ -1,41 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>404 - Page Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - 页面未找到</title>
     <style>
+        :root {
+            /* Fluent Design 2 颜色系统 */
+            --color-primary: #0078D4;
+            --color-primary-dark: #106EBE;
+            --body-color: #323130;
+            --body-bg: #FAF9F8;
+            --border-color: #E1DFDD;
+
+            /* 阴影变量 */
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.08);
+
+            /* 动画时间 */
+            --transition-normal: 0.2s;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            padding: 30px;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+            background: var(--body-bg);
+            color: var(--body-color);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 36rem;
+            margin: 2rem;
+            padding: 3rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
             text-align: center;
+            animation: fadeIn 0.5s ease-out;
         }
 
-        h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        p {
-            font-size: 18px;
-            margin-bottom: 30px;
+        .error-code {
+            font-size: 6rem;
+            font-weight: 700;
+            margin: 0;
+            background: linear-gradient(135deg, var(--color-primary) 0%, #2B88D8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0.9;
         }
 
-        a {
-            color: #007bff;
+        .error-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 1rem 0;
+            color: #323130;
+        }
+
+        .error-message {
+            font-size: 1.125rem;
+            color: #605E5C;
+            margin-bottom: 2rem;
+        }
+
+        .home-link {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--color-primary);
+            color: white;
             text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all var(--transition-normal);
+        }
+
+        .home-link:hover {
+            background: var(--color-primary-dark);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .home-link:active {
+            transform: translateY(0);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 640px) {
+            .container {
+                margin: 1rem;
+                padding: 2rem;
+            }
+
+            .error-code {
+                font-size: 4rem;
+            }
+
+            .error-title {
+                font-size: 1.25rem;
+            }
+
+            .error-message {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 
 <body>
-    <h1>404 - Page Not Found</h1>
-    <p>Sorry, the page you are looking for does not exist.</p>
-    <p>Please check if you have entered the correct URL.</p>
+    <div class="container">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-title">页面未找到</h2>
+        <p class="error-message">抱歉，您访问的页面不存在或已被移除。</p>
+        <a href="/" class="home-link">返回首页</a>
+    </div>
 </body>
 
 </html>
